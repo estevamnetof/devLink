@@ -93,17 +93,23 @@ export function Home() {
 
         {socialLinks && Object.keys(socialLinks).length > 0 && (
           <footer className="flex justify-center gap-3 my-4">
-            <Social url={socialLinks?.facebook}> 
-              <FaFacebook size={35} color='#fff' />
-            </Social>
+            {socialLinks.facebook && (
+              <Social url={socialLinks?.facebook}> 
+                <FaFacebook size={35} color='#fff' />
+              </Social>
+            )}
             
-            <Social url={socialLinks?.youtube}> 
-              <FaYoutube size={35} color='#fff' />
-            </Social>
+            {socialLinks.youtube && (
+              <Social url={socialLinks?.youtube}> 
+                <FaYoutube size={35} color='#fff' />
+              </Social>
+            )}
 
-            <Social url={socialLinks?.instagram}> 
-              <FaInstagram size={35} color='#fff' />
-            </Social>
+            {socialLinks.instagram && (
+              <Social url={socialLinks?.instagram}> 
+                <FaInstagram size={35} color='#fff' />
+              </Social>
+            )}
         </footer>
         )}
       </main>
